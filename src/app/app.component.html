@@ -17,7 +17,7 @@
 
   
 
-    <div 
+    <!-- <div 
     class="msg left-msg"
     
    
@@ -42,7 +42,6 @@
         </div>
 
         <div class="msg-text">
-          <!-- bonjour, Bienvenue  ! vous pouvez commencez le Chat en envoyant un 'salut'. 😄 -->
         {{msg.text}}
         </div>
       </div>
@@ -68,7 +67,33 @@
 
         <div class="msg-text">{{msg.text}}</div>
       </div>
+    </div> -->
+
+
+
+
+    <div 
+    
+    *ngFor="let msg of messages"
+   
+    class="msg {{msg.position}}-msg"
+
+    >
+
+      <div class="msg-img" 
+      style=" background-image: url({{msg.bg}})">
+      </div>
+
+      <div class="msg-bubble-{{msg.position}}">
+        <div class="msg-info">
+          <div class="msg-info-name">{{msg.sender}}</div>
+          <div class="msg-info-time">12:14</div>
+        </div>
+
+        <div class="msg-text">{{msg.text}}</div>
+      </div>
     </div>
+
 
 
 
